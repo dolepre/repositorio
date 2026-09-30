@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_empresa',150);
+            $table->string('contacto_principal',100);
+            $table->string('telefono_whatsapp',20);
+            $table->enum('zona_geografica', ['Oeste','Este','cabudare','centro','zona industrial']);
+            $table->unsignedBigInterger('user_id')->nullable();
+            $table->unsignedBigInterger('user_id')->nullable();
             $table->timestamps();
+
         });
     }
 
