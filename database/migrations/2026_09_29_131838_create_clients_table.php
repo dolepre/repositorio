@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('contacto_principal',100);
             $table->string('telefono_whatsapp',20);
             $table->enum('zona_geografica', ['Oeste','Este','cabudare','centro','zona industrial']);
-            $table->unsignedBigInterger('user_id')->nullable();
-            $table->unsignedBigInterger('user_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
         });

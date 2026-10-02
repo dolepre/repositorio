@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_interactions', function (Blueprint $table) {
+        Schema::create('interactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id')->constrained()->onDelete('cascade');
             $table->enum('tipo_interaccion', ['Llamada', 'Visita', 'WhatsApp']);
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_interactions');
+        Schema::dropIfExists('interactions');
     }
 };
